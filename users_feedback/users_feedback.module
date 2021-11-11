@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Main file for custom hooks.
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function users_feedback_theme($existing, $type, $theme, $path): array {
+  return [
+    'main' => [
+      'variables' => [
+        'main_form' => [],
+        'cards' => [],
+      ],
+    ],
+    'about' => [
+      'variables' => [
+        'guest_name' => NULL,
+        'guest_email' => NULL,
+        'guest_number' => NULL,
+        'feedback' => NULL,
+        'fid_avatar' => [],
+        'fid_picture' => [],
+        'created_time' => NULL,
+      ],
+    ],
+  ];
+}
